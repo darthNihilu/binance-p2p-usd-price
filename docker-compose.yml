@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  price-checker-node-bot:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - API_TOKEN=TOKEN
+    restart: unless-stopped
+
+volumes:
+  finance-google-spreadsheets-bot:
